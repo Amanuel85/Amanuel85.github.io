@@ -3,7 +3,7 @@
 "use strict";
 
 function pow(x, n) {
-	return x * n;
+	return x ** n;
 }
 
 function add2(n1, n2) {
@@ -29,7 +29,32 @@ function add(...args) {
 	60 - 69  D
 	0 - 59   NC
 */
+
 function computeGrade(grades) {
-	return "???";
+	for (let i =0 ;i<grades.length;i++){
+		if(grades[i]>=90 || grades[i]<=100){
+			return "A";
+		}
+	}
+	
 }
+function computeGrade(grades) {
+	for (let i =0 ;i<grades.length;i++){
+		if(grades[i]>=80 || grades[i]< 90){
+			return "B";
+		}
+	}
+	
+}
+
+function computeGrade(grades) {
+	for (let i =0 ;i<grades.length;i++){
+		if(grades[i]>=70 || grades[i]<80){
+			return "C";
+		}
+	}
+	
+}
+
+
 
