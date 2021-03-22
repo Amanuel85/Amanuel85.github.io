@@ -3,11 +3,7 @@
 "use strict";
 
 function pow(x, n) {
-	return x ** n;
-}
-
-function add2(n1, n2) {
-	return n1 + n2;
+	return x**n;
 }
 
 function add(...args) {
@@ -20,6 +16,12 @@ function add(...args) {
 	return sum;
 }
 
+function add2(n1, n2) {
+	return n1 + n2;
+}
+
+
+
 /*
 	Input: grades is an array of integers
 	Output: compute average of grades and report letter grade as follows:
@@ -29,32 +31,33 @@ function add(...args) {
 	60 - 69  D
 	0 - 59   NC
 */
-
-function computeGrade(grades) {
-	for (let i =0 ;i<grades.length;i++){
-		if(grades[i]>=90 || grades[i]<=100){
-			return "A";
-		}
-	}
-	
-}
-function computeGrade(grades) {
-	for (let i =0 ;i<grades.length;i++){
-		if(grades[i]>=80 || grades[i]< 90){
+ function computeGrade(grades) {
+ 	for (let i =0 ;i<grades.length;i++){
+		if(grades[i]>=90 && grades[i]<100){
+			return "A";}
+		else if (grades[i]>=80 && grades[i]<90){
 			return "B";
 		}
-	}
-	
+		else if (grades[i]>=70 && grades[i]<80){
+			return "C"
+		}
+		else if (grades[i]>=60&& grades[i]<70){
+			return "D"
+		}
+		else {return "NC"}
+ 	                   }  
 }
 
-function computeGrade(grades) {
-	for (let i =0 ;i<grades.length;i++){
-		if(grades[i]>=70 || grades[i]<80){
-			return "C";
-		}
-	}
-	
-}
+
+//   function computeGrade(grades) {
+// 	let score;
+// 	for (let i =0 ;i<grades.length;i++){
+// 	   if(grades[i]===80 ){
+// 		return  "B";
+// 	   }
+// 	}
+   
+//  }
 
 
 

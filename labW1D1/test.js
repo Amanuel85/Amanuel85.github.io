@@ -16,23 +16,26 @@ function mochaTests() {
         });
     });
 
-    describe("computeGrade", function (...args) {
-        it("add variable number of arguments", function () {
-            assert.equal(add(1, 2, 3), 6);
-        });
-    });
-
     describe("add", function (...args) {
         it("add variable number of arguments", function () {
             assert.equal(add(), 0);
         });
     });
 
+    describe("computeGrade", function (...args) {
+        it("add variable number of arguments", function () {
+            assert.equal(add(1, 2, 3), 6);
+        });
+    });
+
+
     describe("computeGrade", function () {
         it("Compute letter grade", function () {
             assert.equal(computeGrade([90,90,90]), "A");
         });
     });
+
+
     describe("computeGrade", function () {
         it("Compute letter grade", function () {
             assert.equal(computeGrade([80,80,80]), "B");
@@ -52,4 +55,6 @@ function mochaTests() {
         it("Compute letter grade", function () {
             assert.equal(computeGrade([59,59,59]), "NC");
         });
-    });        }
+    });       
+
+}
