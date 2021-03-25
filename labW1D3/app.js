@@ -12,11 +12,36 @@ Creates an object that contains the following information from the "this" object
 	cntReferences	// count of reference properties (use the typeof operator to compute this)
 }	
 */
+/*
+function analyzer() {
+	let numProp = 0;
+	let cntShort = 0;
+	let cntRefere = 0;
+	// this.numProperties 
+	// this.cntShortName 
+	// this.cntReference 
+
+	for (let key in Object.keys(this) )
+	{
+		//this.numProperties +=key;
+		 if(typeof this[key] === "object"){
+		 	cntRefere += key
+		 }
+		// if(key.length<2){
+		// 	this.cntShortName +=1
+		// }
+	return{ cntReference :cntRefere}
+	}
+	
+	//return {numProperties :this.numProperties,cntShortName:this.cntShortName,cntReference:this.cntReference}
+}
+*/
+
 function analyzer() {
 	let numProperties =0;
 	let cntShortName = 0;
 	let cntReference =0;
-	for (let key in this.Person )
+	for (let key in this )
 	{
 		numProperties +=key;
 		if(typeof this[key] === "object"){
@@ -26,8 +51,21 @@ function analyzer() {
 			cntShortName +=1
 		}
 	}
-	return numProperties,cntShortName,cntReference;
+	return {numProperties:numProperties,cntShortName:cntShortName,cntReference:cntReference}
 }
+
+/////////////////////
+// function analyzer() {
+// 	// let numProp = 0;
+// 	// let cntShort = 0;
+// 	// let cntRefere = 0;
+// 	// this.numProperties  
+// 	// this.cntShortName 
+// 	// this.cntReference 
+// 	return {this.numProperties; this.cntShortName;this.cntReference}
+// }
+
+
 
 
 /* Constructor for a person object
@@ -52,5 +90,5 @@ function Person(name, country, grades) {
 		return avg; }  
 }
 
-// let ama = new Person("bob", "usa", [100, 90]).computeGrade()
-// console.log(ama)
+ let ama = new Person("bob", "usa", [100, 90]).computeGrade()
+console.log(ama).
