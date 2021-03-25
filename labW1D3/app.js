@@ -1,7 +1,6 @@
 /* eslint-disable require-jsdoc */
 /* eslint-disable no-unused-vars */
 "use strict";
-
 /*
 Function analyzer
 Has an unbound this
@@ -12,61 +11,21 @@ Creates an object that contains the following information from the "this" object
 	cntReferences	// count of reference properties (use the typeof operator to compute this)
 }	
 */
-/*
 function analyzer() {
-	let numProp = 0;
-	let cntShort = 0;
-	let cntRefere = 0;
-	// this.numProperties 
-	// this.cntShortName 
-	// this.cntReference 
+	let nProperties =0;
+	let nShortName = 0;
+	let nReference =0;
+	let key = Object.keys(this)//name,cou
+    nProperties = key.length;
+	for(let i = 0;i<key.length;i++){
+		if(key[i].length <3){
+			nShortName++} }
 
-	for (let key in Object.keys(this) )
-	{
-		//this.numProperties +=key;
-		 if(typeof this[key] === "object"){
-		 	cntRefere += key
-		 }
-		// if(key.length<2){
-		// 	this.cntShortName +=1
-		// }
-	return{ cntReference :cntRefere}
-	}
-	
-	//return {numProperties :this.numProperties,cntShortName:this.cntShortName,cntReference:this.cntReference}
-}
-*/
+	for (let obj in this){
+		if (typeof this[obj]==="object"){
+			nReference++}}
 
-function analyzer() {
-	let numProperties =0;
-	let cntShortName = 0;
-	let cntReference =0;
-	for (let key in this )
-	{
-		numProperties +=key;
-		if(typeof this[key] === "object"){
-			cntReference +=1
-		}
-		if(key.length<2){
-			cntShortName +=1
-		}
-	}
-	return {numProperties:numProperties,cntShortName:cntShortName,cntReference:cntReference}
-}
-
-/////////////////////
-// function analyzer() {
-// 	// let numProp = 0;
-// 	// let cntShort = 0;
-// 	// let cntRefere = 0;
-// 	// this.numProperties  
-// 	// this.cntShortName 
-// 	// this.cntReference 
-// 	return {this.numProperties; this.cntShortName;this.cntReference}
-// }
-
-
-
+return {numProperties:nProperties,cntReference:nReference,cntShortName:nShortName}}
 
 /* Constructor for a person object
 	Person(name, country, grades) creates object
@@ -89,6 +48,3 @@ function Person(name, country, grades) {
 			avg = sum/this.grades.length;
 		return avg; }  
 }
-
-//  let ama = new Person("bob", "usa", [100, 90]).computeGrade()
-// console.log(ama)
