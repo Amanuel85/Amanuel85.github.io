@@ -90,5 +90,5 @@ function Person(name, country, grades) {
 		return avg; }  
 }
 
- let ama = new Person("bob", "usa", [100, 90]).computeGrade()
-console.log(ama).
+//  let ama = new Person("bob", "usa", [100, 90]).computeGrade()
+// console.log(ama)
