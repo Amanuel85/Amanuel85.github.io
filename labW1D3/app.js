@@ -16,13 +16,13 @@ function analyzer() {
 	let numProperties =0;
 	let cntShortName = 0;
 	let cntReference =0;
-	for (let key in this )
+	for (let key in this.Person )
 	{
 		numProperties +=key;
 		if(typeof this[key] === "object"){
 			cntReference +=1
 		}
-		if(cntShortName.length<2){
+		if(key.length<2){
 			cntShortName +=1
 		}
 	}
