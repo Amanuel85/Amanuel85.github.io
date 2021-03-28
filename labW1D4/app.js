@@ -90,13 +90,13 @@ function removeZeros(array) {
         newarr.push(arr) }  
 
 return newarr}
-console.log(removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]))
+//console.log(removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]))
 
-var a =[3, 0, 0, 0, 5, 6, 0, 0, 7, 0];
+//var a =[3, 0, 0, 0, 5, 6, 0, 0, 7, 0];
 
-var b = a.filter(function(item, pos, arr){
+//var b = a.filter(function(item, pos, arr){
   // Always keep the 0th element as there is nothing before it
   // Then check if each element is different than the one before it
-  return pos === 0 || item !== arr[pos-1];
-});
+  //return pos === 0 || item !== arr[pos-1];
+//});
 //console.log(b)

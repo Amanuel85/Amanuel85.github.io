@@ -15,7 +15,7 @@ function analyzer() {
 	let nProperties =0;
 	let nShortName = 0;
 	let nReference =0;
-	let key = Object.keys(this)//name,cou
+	let key = Object.keys(this)//name,country
     nProperties = key.length;
 	for(let i = 0;i<key.length;i++){
 		if(key[i].length <3){
