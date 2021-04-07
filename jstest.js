@@ -82,7 +82,7 @@
 // "baz"];
 // console.log(first);
 // console.log(third);
-
+/*
 let usergroup = {};
 [usergroup.firstname, usergroup.lastname] = "Smith Tom".split(" ")
 console.log(usergroup)
@@ -113,3 +113,11 @@ let newpr = new Person("aman",30)
 console.log(newpr)
 let {firstName, surname} = "Ilya Kantor".split(' ');
 console.log(firstName)
+*/
+let user = {
+  firstName: "John",
+  sayHi() {
+  console.log(`Hello, ${this.firstName}!`);
+  }
+  };
+  setTimeout(user.sayHi, 1000); // Hello, undefined
