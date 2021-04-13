@@ -216,10 +216,171 @@ let green = function(x){
     
     // // using bind
     // group.showList.bind(group)
+    /*
+class User{
+    constructor(name){
+        this.names = name;
+    }
+    set name(value){
+        if(value.length>4){
+            this.__names = value
+        }
+        else {console.log("value msut greater than 4")}
+    }
+    get name(){
+        console.log(this.__name)
+    }
+
+}
+let myuser = new User("Amani")
+myuser.names
+*/
+/*
+class Animal{
+    constructor(name,speed){
+        this.name = name;
+        this.speed = 0
+    }
+    run(speed){
+        this.speed += speed
+        console.log(`${this.name} runs with ${this.speed}`)
+
+    }
+    stop(){
+        console.log(`${this.name} stops`)
+    }
+}
+
+class Rabit extends Animal{
+    constructor(name,speed,color){
+        super(name,speed)
+        this.color = color
+
+    }
+    hide(){
+        console.log(`${this.name} hides`)
+    }
+}
+let rabit = new Rabit("bigear","yellow")
+rabit.run(10)
+*/
+/*
+class Animal {
+    constructor(name,speed) {
+    this.name = name;
+    this.speed = speed;
+    }
+    stop(){console.log(this.name,"stops")}
+    }
+
+    class Rabbit extends Animal {
+        
+    constructor(name,length) {
+        super(name)
+     this.length = length
+    this.created = Date.now();
+    }
+    stop (){
+        console.log(this.name,"stops inside child class")
+        super.stop()
+
+    }
+    }
+    let rabbit = new Rabbit("White Rabbit"); // Error: this is not defined
+    console.log(rabbit.stop());
+    console.log(rabbit.name)
+    */
+   /*
+class Article{
+    constructor(title,date){
+        this.date = date;
+        this.title = title
+        
+    }
+    static todaydigest(n =1){
+        return n*3
+    }
+}
+let newarticel= console.log(Article.todaydigest(2))
+*/
+/*
+class obj{
+    constructor(name){
+    this.name = name
+    }
+}
+class Rabbit extends obj{
+    constructor(name){
+        super(name)
+        this.name = name;
+    }
+}
+let rabit = new Rabbit("Rabi")
+//console.log(rabit.hasOwnProperty('name'))
+console.log(rabit.name)
+*/
+
+/*
+class cofeeMaker {
+    _waterAmount = 0 ;
+    set waterAmount(value) {
+        if(value < 0){
+            value  =0 
+        }
+        else {this._waterAmount = value}
+    }
+    get waterAmount(){
+        return this._waterAmount
+    }
+    constructor(power){
+        this.power = power
+    }
+
+}
+   let coffe = new cofeeMaker(100);
+   coffe.waterAmount = 90
+ console.log(coffe._waterAmount)
+
+ */
+class Car{
+ constructor (make,year,price,tax){
+     this.mak = make;
+     this.year = year;
+     this.price = price ;
+     this.tax = tax 
+ }
+ totalcost (){
+     return this.price*(1+this.tax)
+ }
+};
+
+class ElecCar extends Car {
     
-let person1 = new Object({
-    name: "Aman",
-    lastname : "Abuhay",
-    age: "30"
-})
-console.log(person1)
+    constructor (make,year,price,tax){
+        super (make,year,price,tax)
+        this.make = make;
+        this.year = year;
+        this.price = price;
+        this.tax = tax;
+
+    }
+ 
+}
+class Manual extends Car {
+    constructor (make,year,price,tax){
+        super(make,year,price,tax)
+  
+    }
+
+}
+let  honda = new Car ( "Civic",2020,10000,0.01)
+let tesla = new ElecCar("Tesla",2021,30000,0.01)
+let oldcar = new Manual ("Toyota",1999,2000,0.05)
+let car = [honda,tesla,oldcar]
+function computeTotalPrice(car){
+    return car.reduce ((sum,car)=>sum+car.totalcost(),0)
+}
+console.log(tesla.totalcost())
+console.log(oldcar.totalcost())
+console.log(honda.totalcost())
+console.log(computeTotalPrice(car))

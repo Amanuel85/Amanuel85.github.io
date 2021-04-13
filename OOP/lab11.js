@@ -1,12 +1,7 @@
 'use strict'
 
-/*
-➢Properties: firstName:String, lastName:String, grades: Array
-➢Methods:
-➢inputNewGrade(newGrade): push newGrade to grades
-➢computeAverageGrade(): return average of grades
-➢Create an Array with multiple students which are created using Object.create();
-➢Then compute the average grade for all students in the array */
+// 1 Create an object student using object literal which has 
+//let object  = {}
 
  let student = {firstName: this.firstName,lastName:this.lastName,grades:this.grades,
 inputNewGrade:function(newGrade){
