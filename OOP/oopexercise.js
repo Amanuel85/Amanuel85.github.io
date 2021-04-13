@@ -342,6 +342,7 @@ class cofeeMaker {
  console.log(coffe._waterAmount)
 
  */
+/*
 class Car{
  constructor (make,year,price,tax){
      this.mak = make;
@@ -384,3 +385,59 @@ console.log(tesla.totalcost())
 console.log(oldcar.totalcost())
 console.log(honda.totalcost())
 console.log(computeTotalPrice(car))
+*/
+/*
+class Account{
+    constructor(accountid,balance){
+    this.accountid = accountid;
+    this.balance = balance}
+    computeUpdatedBalance(){
+    return balance}
+    }
+    class CheckingAccount extends Account{
+    constructor(accountid,balance,monthlyfee){
+    super(accountid,balance)
+    this.monthlyfee = monthlyfee}
+    computedUpdatedBalance(){
+    return this.balance - this.monthlyfee
+    }}
+    class SavingsAccount extends Account {
+    constructor(accountid,balance,interestrate){
+    super(accountid,balance)
+    this.interestrate = interestrate}
+    computeUpdateBalance(){
+    return this.balance+(this.interestrate*this.balance)}
+    }
+    class Employee extends Account {
+    constructor(employeename,accounts){
+        super(accounts)
+    this.employeename = employeename;
+    this.accounts = []}
+    addAccount(account){
+    return this.accounts.push(account)}
+    computeUpdatedBalanceSum(){
+    let sum = this.accounts.reduce((sum,balance)=>sum+balance.computeUpdateBalance(),0)
+    return sum}
+    }
+
+    const emp = new Employee('Tina');
+
+emp.addAccount(new CheckingAccount(1001, 5000.00, 25));
+
+emp.addAccount(new CheckingAccount(1002, 2000.00, 25));
+
+emp.addAccount(new SavingsAccount(8001, 30000.00, 0.02));
+
+emp.addAccount(new SavingsAccount(8002, 50000.00, 0.04));
+
+ 
+
+console.log(emp.computeUpdatedBalanceSum()); //Expected Result: 89550
+*/
+//String.Prototype.
+let reverse = function(string){
+    let str = ""
+    for(let i = string.length;i>0;i--){
+    str = str+string[i]}
+    return str }
+    console.log(reverse("Hello"))
